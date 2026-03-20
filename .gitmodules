@@ -1,0 +1,10 @@
+[submodule "ml-kem"]
+	path = ml-kem
+	url = https://github.com/pablo-gf/pqm4
+	branch = mlkem-benchmark-cw308
+[submodule "ecdh/libopencm3"]
+	path = ecdh/libopencm3
+	url = https://github.com/libopencm3/libopencm3.git
+[submodule "ecdh/micro-ecc"]
+	path = ecdh/micro-ecc
+	url = https://github.com/kmackay/micro-ecc.git
