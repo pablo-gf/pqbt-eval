@@ -14,13 +14,16 @@ This repository specifically focuses on comparing the computational performance 
 
 This repository is organized into two main modules to separate ECDH and ML-KEM tests, containing the algorithm implementations, benchmarking materials, and results.
 
-## ML-KEM (`pqbt-eval/ml-kem`)
-This subdirectory is a subtree of a [pqm4](https://github.com/mupq/pqm4) fork, a project tasked with providing PQC reference and optimized implementations that target the ARM Cortex-M4 processor. The parameters used during compilation are:
-    - CFLAGS (Compiler Flags) found in `pqm4/mupq/mk/config.mk`: Options for the C compiler used to set optimization, warnings, debugging...
-        - The `interface.py` SCRIPT FROM PQM4 allows to choose different optimization flags: `--opt` or `-o` {speed,size,debug} (default is speed, which includes the `-O3` `-g3` flags)
-    - ARCH_FLAGS (Architecture Flags) found in pqm4/mk/opencm3.mk: Sets hardware-specific compiler flags.
-    - LDFLAGS (Linker Flags) found in `pqm4/mk/cw308t-stm32f3.mk`: Specifies the target device and library target.
-The clock frequency is set to 36 MHz by adjusting the clock settings in `pqm4/common/hal-opencm3.c` for the CW308-STM32F3 board.
+## ML-KEM tests (`pqbt-eval/ml-kem`)
+This subdirectory is a submodule of a [pqm4](https://github.com/mupq/pqm4) fork, a project tasked with providing PQC reference and optimized implementations that target the ARM Cortex-M4 processor. The parameters used during compilation are:
+
+- CFLAGS (Compiler Flags) found in `pqm4/mupq/mk/config.mk`: Options for the C compiler used to set optimization, warnings, debugging...
+    - The `interface.py` SCRIPT FROM PQM4 allows to choose different optimization flags: `--opt` or `-o` {speed,size,debug} (default is speed, which includes the `-O3` `-g3` flags)
+    
+- ARCH_FLAGS (Architecture Flags) found in pqm4/mk/opencm3.mk: Sets hardware-specific compiler flags.
+- LDFLAGS (Linker Flags) found in `pqm4/mk/cw308t-stm32f3.mk`: Specifies the target device and library target.
+
+The clock frequency is set to 36 MHz by adjusting the settings in `pqm4/common/hal-opencm3.c` for the CW308-STM32F3 board, thus ressembling the clock frequency of Silicon Lab's BT122 Bluetooth module.
 
 ### Results:
 The ML-KEM benchmarking results obtained during experimentation can be found under the `pqbt/ml-kem/pqm4/benchmarks`, ordered by security level and implementation (optimized/reference). These are the results obtained from executing 100 runs of each function with a clock frequency of 36 MHz. 
@@ -37,7 +40,7 @@ The ML-KEM benchmarking results obtained during experimentation can be found und
 | ml-kem-768 (100 executions) | m4fspeed | AVG: 701,045 <br /> MIN: 699,190 <br /> MAX: 712,993 | AVG: 716,417 <br /> MIN: 712,439 <br /> MAX: 730,494 | AVG: 765,580 <br /> MIN: 763,719 <br /> MAX: 777,540 |
 | ml-kem-768 (100 executions) | m4fstack | AVG: 702,992 <br /> MIN: 701,192 <br /> MAX: 714,918 | AVG: 722,778 <br /> MIN: 718,881 <br /> MAX: 736,810 | AVG: 772,746 <br /> MIN: 770,965 <br /> MAX: 784,662 |
 
-## ECDH (`pqbt-eval/ecdh`)
+## ECDH tests (`pqbt-eval/ecdh`)
 
 ### Overview
 
