@@ -1,0 +1,20 @@
+ECDH Benchmark Results - Summary
+Clock: 36 MHz
+============================================================
+
+P-192:
+  keygen         :    1,974,939 cycles (  54.859 ms)
+    min:    1,965,621 cycles
+    max:    1,985,076 cycles
+  sharedsecret   :    1,973,691 cycles (  54.825 ms)
+    min:    1,962,257 cycles
+    max:    1,983,669 cycles
+
+P-256:
+  keygen         :    5,763,536 cycles ( 160.098 ms)
+    min:    5,750,075 cycles
+    max:    5,779,386 cycles
+  sharedsecret   :    5,761,502 cycles ( 160.042 ms)
+    min:    5,748,325 cycles
+    max:    5,778,084 cycles
+
