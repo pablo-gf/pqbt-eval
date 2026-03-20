@@ -4,7 +4,7 @@ This repository provides the experimental framework and benchmarking data for th
 ## Overview
 The objective of this work is to evaluate the protocol-level and computational overhead incurred when migrating Bluetooth Classic pairing from traditional Elliptic Curve Cryptography (ECC) to Post-Quantum Cryptography (PQC).
 
-This repository specifically focuses on comparing the computational performance of the P-192 (secp192r1) and P-256 (secp256r1) curves and the NIST-standardized ML-KEM variants when executed on resource-constrained hardware under the same compilation and board conditions ressembling the constraints posed by commercial Bluetooth modules. As a result, experiments were conducted using:
+This repository specifically focuses on comparing the computational performance of the P-192 (secp192r1) and P-256 (secp256r1) curves against the NIST-standardized ML-KEM variants when executed on resource-constrained hardware under the same compilation and board conditions ressembling the constraints posed by commercial Bluetooth modules. As a result, experiments were conducted using:
 
 - *Target MCU*: STM32F3 (ARM Cortex-M4).
 
@@ -14,7 +14,7 @@ This repository specifically focuses on comparing the computational performance 
 
 This repository is organized into two main modules to separate ECDH and ML-KEM tests, containing the algorithm implementations, benchmarking materials, and results.
 
-## ML-KEM ON CW308T-STM32F3
+## ML-KEM (`pqbt-eval/ml-kem`)
 This subdirectory is a subtree of a [pqm4](https://github.com/mupq/pqm4) fork, a project tasked with providing PQC reference and optimized implementations that target the ARM Cortex-M4 processor. The parameters used during compilation are:
     - CFLAGS (Compiler Flags) found in `pqm4/mupq/mk/config.mk`: Options for the C compiler used to set optimization, warnings, debugging...
         - The `interface.py` SCRIPT FROM PQM4 allows to choose different optimization flags: `--opt` or `-o` {speed,size,debug} (default is speed, which includes the `-O3` `-g3` flags)
@@ -37,7 +37,7 @@ The ML-KEM benchmarking results obtained during experimentation can be found und
 | ml-kem-768 (100 executions) | m4fspeed | AVG: 701,045 <br /> MIN: 699,190 <br /> MAX: 712,993 | AVG: 716,417 <br /> MIN: 712,439 <br /> MAX: 730,494 | AVG: 765,580 <br /> MIN: 763,719 <br /> MAX: 777,540 |
 | ml-kem-768 (100 executions) | m4fstack | AVG: 702,992 <br /> MIN: 701,192 <br /> MAX: 714,918 | AVG: 722,778 <br /> MIN: 718,881 <br /> MAX: 736,810 | AVG: 772,746 <br /> MIN: 770,965 <br /> MAX: 784,662 |
 
-## ECDH ON CW308T-STM32F3
+## ECDH (`pqbt-eval/ecdh`)
 
 ### Overview
 
