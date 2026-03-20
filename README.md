@@ -8,7 +8,7 @@ This repository specifically focuses on comparing the computational performance 
 
 - *Target MCU*: STM32F3 (ARM Cortex-M4).
 
-- *Platform*: ChipWhisperer CW308 UFO Baseboard.
+- *Platform*: ChipWhisperer [CW308-STM32F3](https://chipwhisperer.readthedocs.io/en/latest/Targets/CW308%20UFO.html) UFO Baseboard.
 
 - *Metrics*: Precise CPU cycle counts for each of the cryptographic functions.
 
@@ -103,3 +103,6 @@ The P-192 and P-256 results obtained during experimentation can be found under t
 | P-256   | keygen         | 9,933,674  | 9,920,209  | 9,949,593  | 275.935       |
 | P-256   | sharedsecret   | 9,931,275  | 9,918,109  | 9,947,856  | 275.869       |
 
+
+## Notes
+To successfuly execute the code provided in this repository, it is required to first install [ChipWhisperer's python module](https://chipwhisperer.readthedocs.io/en/latest/index.html). This package is used to perform any sort of interaction with the target board, like flashing binaries or retrieving output data.
