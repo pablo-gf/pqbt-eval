@@ -1,4 +1,4 @@
-# Post-Quantum Bluetooth Evaluation (PQ-BT)
+# Post-Quantum Bluetooth Classic Evaluation
 This repository provides the experimental framework and benchmarking data for the research article "Quantum-Resistant Pairing for Resource-Constrained Bluetooth Classic".
 
 ## Overview
