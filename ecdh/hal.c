@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 #include "hal.h"
 #include <libopencm3/stm32/rcc.h>
 #include <libopencm3/stm32/gpio.h>

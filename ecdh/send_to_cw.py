@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+
 """Flash ECDH benchmark to ChipWhisperer and retrieve results"""
 
 import chipwhisperer as cw

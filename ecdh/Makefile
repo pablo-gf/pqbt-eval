@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: MIT
+
 # Makefile for ECDH Benchmark on CW308T-STM32F3
 
 # ============================================

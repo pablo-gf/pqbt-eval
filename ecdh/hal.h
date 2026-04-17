@@ -1,3 +1,5 @@
+// SPDX-License-Identifier: MIT
+
 #ifndef HAL_H
 #define HAL_H
 
