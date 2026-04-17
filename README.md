@@ -106,3 +106,8 @@ The P-192 and P-256 results obtained during experimentation can be found under t
 
 ## Notes
 To successfuly execute the code provided in this repository, it is required to first install [ChipWhisperer's python module](https://chipwhisperer.readthedocs.io/en/latest/index.html). This package is used to perform any sort of interaction with the target board, like flashing binaries or retrieving output data.
+
+## License
+The original code and documentation in this repository (except where noted) are licensed under the MIT License (see `LICENSE`).
+
+This repository also includes or references third-party components (including Git submodules and some imported source files). Those third-party components remain under their respective original licenses, as indicated in their own LICENSE/NOTICE files and/or per-file SPDX headers.
